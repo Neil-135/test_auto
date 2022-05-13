@@ -50,7 +50,7 @@ def open_quit():
     # driver.get(checkbox_file_path)
     driver.get(alert_file_path)
     # driver.get(url2)
-    time.sleep(6)
+    time.sleep(4)
     yield driver
     driver.quit()
 
