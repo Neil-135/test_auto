@@ -54,6 +54,7 @@ def open_quit():
     yield driver
     driver.quit()
 
+
 def test_my_web(open_quit):
     print('\n 开始执行测试用例')
     driver = open_quit
