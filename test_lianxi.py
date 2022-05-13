@@ -16,7 +16,7 @@ def open_quit():
     driver.find_element_by_id('su').send_keys(Keys.ENTER)
     sleep(3)
     driver.find_element_by_xpath('//*[@id="kw"]').clear()
-    sleep(2)
+    sleep(3)
     yield driver
     driver.quit()
 
