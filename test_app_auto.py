@@ -7,7 +7,6 @@ import time
 
 
 class TestAppauto:
-    @pytest.mark.smoke
     def test_app_auto_1(self):
         print('压力测试')
         for cycle in range(1,4):
@@ -54,6 +53,6 @@ class TestAppauto:
 
 
 if __name__ == '__main__':
-    argv = ['-s','-q','test_app_auto.py','-m','smoke']
+    argv = ['-s','-q','test_app_auto.py']
     pytest.main(argv)
     # unittest.main()
