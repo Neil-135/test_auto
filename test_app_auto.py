@@ -7,38 +7,6 @@ import time
 
 
 class TestAppauto:
-    # @pytest.mark.repeat(2)
-    def test_app_auto(self):
-    # def setUp(self):
-    #     print('开始测试')
-        caps = {}
-        caps["platformName"] = "Android"
-        caps["platformVersion"] = "5"
-        caps["deviceName"] = "127.0.0.1:21503"
-        caps["appPackage"] = "com.lchr.diaoyu"
-        caps["appActivity"] = "com.lchr.diaoyu.SplashActivity"
-        caps["noReset"] = True
-        caps["newCommandTimeout"] = 6000
-        caps["automationName"] = "UiAutomator2"
-        caps["ensureWebviewsHavePages"] = True
-
-        app_driver = webdriver.Remote("http://localhost:4723/wd/hub", caps)
-
-        app_driver.find_element_by_id("com.lchr.diaoyu:id/btn_tab_mine").click()
-        app_driver.find_element_by_id("com.lchr.diaoyu:id/u_avatar").click()
-        time.sleep(3)
-        app_driver.find_element_by_xpath("/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.\
-                                         widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/"
-                                         "android.widget.FrameLayout/android.widget.FrameLayout/android.widget."
-                                         "FrameLayout/android.view.View/android.view.View/android.widget."
-                                         "RelativeLayout/android.widget.EditText").send_keys("17318038838")
-        # time.sleep(3)
-        # app_driver.find_element_by_id("com.lchr.diaoyu:id/cb_agree_privacy").click()
-        # time.sleep(3)
-        # app_driver.find_element_by_id("com.lchr.diaoyu:id/btn_get_code").click()
-        time.sleep(5)
-        app_driver.quit()
-
     @pytest.mark.smoke
     def test_app_auto_1(self):
         print('压力测试')
