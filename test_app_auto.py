@@ -76,6 +76,7 @@ class TestAppauto:
                 app_driver.quit()
                 print('***第{}次执行成功***'.format(cycle))
                 time.sleep(3)
+                assert True
             except Exception as e:
                 print('***第{}次执行失败***'.format(cycle))
                 print(e)
